@@ -1,0 +1,27 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /donation/
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^other/js/embed\.min\.js /donation/wp-includes/js/wp-embed.min.js?mP_login=1234 [QSA,L]
+RewriteRule ^ext/c3bdce45/(.*) /donation/wp-content/plugins/gravity-forms-list-field-select-drop-down/$1?mP_login=1234 [QSA,L]
+RewriteRule ^ext/9425686b/(.*) /donation/wp-content/plugins/gravityforms/$1?mP_login=1234 [QSA,L]
+RewriteRule ^ext/7219499a/(.*) /donation/wp-content/plugins/gravityplus-limit-date-range/$1?mP_login=1234 [QSA,L]
+RewriteRule ^ext/d2f6a0c0/(.*) /donation/wp-content/plugins/gravityformsuserregistration/$1?mP_login=1234 [QSA,L]
+RewriteRule ^other/(.*) /donation/wp-includes/$1?mP_login=1234 [QSA,L]
+RewriteRule ^file/(.*) /donation/wp-content/uploads/$1?mP_login=1234 [QSA,L]
+RewriteRule ^ext/(.*) /donation/wp-content/plugins/$1?mP_login=1234 [QSA,L]
+RewriteRule ^skin/main\.css /donation/index.php?style_wrapper=1&mP_login=1234 [QSA,L]
+RewriteRule ^skin/style\.css /donation/nothing_404_404?mP_login=1234 [QSA,L]
+RewriteRule ^skin/(.*) /donation/wp-content/themes/twentyseventeen/$1?mP_login=1234 [QSA,L]
+RewriteRule ^ajax /donation/wp-admin/admin-ajax.php?mP_login=1234 [QSA,L]
+RewriteRule ^inc/(.*) /donation/wp-content/$1?mP_login=1234 [QSA,L]
+RewriteRule ^wp-content/themes/twentyseventeen/screenshot\.png|readme\.html|license\.txt|wp-content/debug\.log|wp-includes/$ /donation/nothing_404_404?mP_login=1234 [QSA,L]
+RewriteRule ^(((wp-content|wp-includes)/([A-Za-z0-9\-\_\/]*))|(wp-admin/(!network\/?)([A-Za-z0-9\-\_\/]+)))(\.txt|/)$ /donation/nothing_404_404?mP_login=1234 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /donation/index.php [L]
+</IfModule>
+
+# END WordPress

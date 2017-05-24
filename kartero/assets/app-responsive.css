@@ -1,0 +1,52 @@
+
+@media only screen and (max-width : 1024px) 
+{
+
+.login-wrap img{
+border:0px solid red;
+}
+
+}
+
+
+@media only screen and (max-width : 970px) 
+{
+
+.login-wrap img{
+border:0px solid yellow;
+}
+
+
+}
+
+@media only screen and (max-width : 750px) 
+{
+
+.login-wrap img{
+border:0px solid green;
+}
+
+
+}
+
+@media only screen and (max-width : 480px) 
+{
+
+.login-wrap img{
+border:0px solid red;
+}
+
+.login-wrap img{
+max-width:140px;
+}
+
+.login-wrap{
+width:auto;
+}
+
+}
+
+
+@media only screen and (max-width : 320px)
+{
+}
